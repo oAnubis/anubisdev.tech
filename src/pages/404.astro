@@ -1,0 +1,30 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<html lang="en">
+	<head>
+		<MainHead title="Not Found" />
+		<style>
+			body{
+				background-color: var(--c-body);
+			}
+			.wrapper {
+				margin-top: 2em;
+				margin-bottom: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<Nav />
+		<div class="wrapper">
+			<h1>Oh No!!</h1>
+			<br>
+			<img src= "https://media.giphy.com/media/sF1yw8VmegDqU/giphy.gif" />
+			<p>Please contact me</p>
+		</div>
+		<Footer />
+	</body>
+</html>

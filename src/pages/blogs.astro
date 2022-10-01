@@ -1,0 +1,60 @@
+---
+import Nav from "../components/Nav.astro"
+import FooterBlog from "../components/FooterBlog.astro"
+import MainHead from "../components/MainHead.astro"
+import BlogPreview from "../components/BlogPreview.astro"
+import "../styles/global.css"
+
+// Fetch the posts
+const blogposts = (await Astro.glob('./blog/**/*.md')).sort(
+    (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <MainHead 
+            title="All Blog Posts | Brandon Coburn"
+			description="Read Brandon's blog posts"
+        />
+        
+        <style>
+           .blogbody{
+            background-color: #272727;
+           }
+
+           .title {
+				color: #C3B8F9;
+				text-decoration: underline;
+				margin-top: 2rem;
+				margin-bottom: 2rem;
+			}
+
+           .blog-list{
+            display: grid;
+			grid-gap: 3rem;
+			margin-bottom: 3rem;
+           }
+
+           @media (min-width: 1200px) {
+				.blog-list {
+					grid-template-columns: 2fr em;
+				}
+			}
+         </style>
+    </head>
+
+    <body class="blogbody">
+        <Nav />
+            <div class="wrapper">
+                <h1 class="title">All Posts</h1>
+                <div class="grid">
+                    {blogposts.map((post) => <BlogPreview post={post} />)}
+                </div>
+            </div>
+        <FooterBlog />
+    </body>
+</html>

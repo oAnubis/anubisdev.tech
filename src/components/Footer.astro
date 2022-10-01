@@ -1,0 +1,32 @@
+---
+const currentYear = new Date().getFullYear();
+---
+	
+	<div>
+		<footer id="Standard">
+			&copy; {currentYear} Brandon Coburn
+			<small class="byline">🚀 Built with Astro</small>
+		</footer>
+	</div>
+	
+
+<style>
+	body{
+		color:#B8E4F9;
+	}
+	#Standard {
+		background-color: #1f1e1e;
+		text-align: center;
+		padding-top: 1rem;
+		padding-right: 2rem;
+		padding-bottom: 1rem;
+		padding-left: 2rem;
+	}
+	.byline {
+		display: block;
+		margin-top: 1rem;
+		color: #90aab7;
+		font-size: var(--f-d2);
+		text-transform: uppercase;
+	}
+</style>

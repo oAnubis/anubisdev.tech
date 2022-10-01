@@ -1,0 +1,35 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Nav from "../components/Nav.astro";
+// Placeholder for scripts and imports
+---
+
+<html lang="en">
+    <head>
+        <MainHead
+            title="Brandon Coburn | Interactive Resume(CV)"
+            description= "This is my interactive resume, highlighting skills and trainings, work experiences, and personal projects"
+            />
+
+        <style>
+            body {
+                background-color: var(--c-body);
+            }
+
+            .title{
+                text-align: center;
+                color: var(--c-titletext);
+            }
+        </style>
+    </head>
+
+    <body>
+        <Nav />
+        <div class="wrapper">
+            <h1 class="title">Brandon Coburn</h1>
+        </div>
+    </body>
+
+
+
+</html>
