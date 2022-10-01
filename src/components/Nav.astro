@@ -2,7 +2,7 @@
 import "../styles/global.css";
 ---
 
-<nav>
+<nav class="tablet-plus">
 	<a class="link" href="/">
 		<div class="monogram">BC</div>
 	</a>
@@ -37,6 +37,12 @@ import "../styles/global.css";
 		gap: 1rem;
 		align-items: center;
 		padding: 1rem;
+	}
+
+	@media only screen and (max-width: 640px) {
+		.link {
+			display: none !important;
+		}
 	}
 
 	.link {
