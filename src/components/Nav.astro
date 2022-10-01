@@ -3,6 +3,18 @@ import "../styles/global.css";
 ---
 
 <nav class="tablet-plus">
+	<nav class="dropdown-wrapper">
+		<div class="dropdown-menu">
+				&#9776;
+				<div class="dropdown-items">
+					<a class="ddlink" href="/projects/"> Portfolio </a>
+					<a class="ddlink" href="/blogs/"> Blog </a>
+					<a class="ddlink" href="/resume/"> Resume(CV) </a>
+					<a class="ddlink" href="/about/"> About </a>
+					<a class="ddlink" href="/404/"> 404 Test</a>
+				</div>
+		</div>
+	</nav>
 	<a class="link" href="/">
 		<div class="monogram">BC</div>
 	</a>
@@ -86,40 +98,107 @@ import "../styles/global.css";
 
 	.socialIcon {
 		position: relative; 
-  display: block;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 63px;
-  background: var(--c-iconbackground);
-  border-radius: 50%;
-  font-size: 30px;
-  color: var(--c-navlink);
-  transition: .5s;
+  		display: block;
+  		width: 30px;
+  		height: 30px;
+  		text-align: center;
+  		line-height: 63px;
+  		background: var(--c-iconbackground);
+  		border-radius: 50%;
+  		font-size: 30px;
+  		color: var(--c-navlink);
+  		transition: .5s;
 	}
 
 	.socialIcon::before{
 		content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: var(--c-iconhover);
-  transition: .5s;
-  transform: scale(.9);
-  z-index: -1;
+		position: absolute;
+  		top: 0;
+  		left: 0;
+  		width: 100%;
+  		height: 100%;
+  		border-radius: 50%;
+  		background: var(--c-iconhover);
+  		transition: .5s;
+  		transform: scale(.9);
+  		z-index: -1;
 	}
 
 	.socialIcon:hover::before{
 		transform: scale(1.1);
-  box-shadow: 0 0 15px var(--c-iconhover);
+  		box-shadow: 0 0 15px var(--c-iconhover);
 	}
 
 	.socialIcon:hover {
 		color: ;
-  box-shadow: 0 0 10px var(--c-iconhover);
-  text-shadow: 0 0 10px var(--c-iconhover);
+  		box-shadow: 0 0 10px var(--c-iconhover);
+  		text-shadow: 0 0 10px var(--c-iconhover);
 	}
+
+	.dropdown-wrapper {
+		float: left;
+		display: relative;
+		position: relative;
+	}
+
+	.dropdown-wrapper .dropdown-menu {
+		width: 0%;
+		padding: 15px;
+		background: #1f1e1e;
+	}
+
+	.dropdown-wrapper a{
+		width:0px;
+		padding: 15px;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.dropdown-wrapper a:hover, .dropdown-wrapper .dropdown-menu:hover {
+		color: #ffe945;
+		background: var(--c-body);
+		width: 315%;
+		cursor: pointer;
+		transition: all 1s;
+	}
+	
+	.dropdown-menu {
+    overflow:hidden;
+
+    position: absolute;  /* <-- added declarations */
+    left: 0; top: -30%;  /*     here               */
+    width: 100%;         /*     and here...        */
+
+	z-index: 12;
+	}
+
+	.dropdown-items {
+		/* This is the item that gets colored for each menu item */
+		width: 100%;
+		position: absolute;
+		top: 100%; left: 0;
+		display: none;
+	}
+
+	.dropdown-items a {
+		display:block;
+		box-sizing: border-box;
+	}
+
+	.dropdown-menu:hover .dropdown-items {
+		display: block;
+	}
+
+	@media screen and (max-width: 639px){
+		.dropdown-menu{
+			flex-wrap: wrap;
+		}
+
+		.dropdown-items{
+			position: static;
+			margin-top: 10px;
+		}
+	}
+
+
 </style>
