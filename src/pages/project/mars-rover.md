@@ -6,12 +6,12 @@ client: Self
 publishDate: 2020-03-02 00:00:00
 img: ../../assets/GOL.png
 description: |
-My version of John Conway's Game of Life Cellular Automata, taking a heavily Object-Oriented approach. (WIP)
+  My version of John Conway's Game of Life Cellular Automata, taking a heavily Object-Oriented approach. (WIP)
 tags:
--oop- 
--winforms-
--Project-
--WIP-
+- -oop- 
+- -winforms-
+- -Project-
+- -WIP-
 ---
 
 This project was very interesting, first it explores a simulation of an organic system contained within a machine.
