@@ -7,9 +7,9 @@ img: https://images.unsplash.com/photo-1548391350-1a529f6ea42d?fit=crop&w=1400&h
 description: |
   We took some cool pictures of the moon and made a website about it.
 tags:
-  - design
-  - dev
-  - branding
+- design
+- dev
+- branding
 
 draft: true
 ---
