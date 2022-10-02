@@ -1,0 +1,9 @@
+{
+    "pages": [
+        {
+            "title": "Landing Page",
+            "page": "src/pages/index.astro",
+            "id": ""
+        }
+    ]
+}

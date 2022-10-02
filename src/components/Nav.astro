@@ -3,19 +3,18 @@ import "../styles/global.css";
 ---
 
 <nav class="tablet-plus">
-	<div class="topnav">
-		<a href="#home" class="active"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></a>
-		<!-- Navigation links (hidden by default) -->
-		<div id="myLinks">
-		  <a href="#news">News</a>
-		  <a href="#contact">Contact</a>
-		  <a href="#about">About</a>
+	<nav class="dropdown-wrapper">
+		<div class="dropdown-menu">
+				&#9776;
+				<div class="dropdown-items">
+					<a class="ddlink" href="/projects/"> Portfolio </a>
+					<a class="ddlink" href="/blogs/"> Blog </a>
+					<a class="ddlink" href="/resume/"> Resume(CV) </a>
+					<a class="ddlink" href="/about/"> About </a>
+					<a class="ddlink" href="/404/"> 404 Test</a>
+				</div>
 		</div>
-		<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-		  <i class="fa fa-bars"></i>
-		</a>
-	  </div>
+	</nav>
 	<a class="link" href="/">
 		<div class="monogram">BC</div>
 	</a>
@@ -136,53 +135,65 @@ import "../styles/global.css";
   		text-shadow: 0 0 10px var(--c-iconhover);
 	}
 
-	/* Style the navigation menu */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-}
+	.dropdown-wrapper {
+		float: left;
+		display: relative;
+		position: relative;
+		/* This is hiding the menu */
+		display:none;
+	}
 
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-}
+	.dropdown-wrapper .dropdown-menu {
+		width: 0%;
+		padding: 15px;
+		background: #1f1e1e;
+	}
 
-/* Style navigation menu links */
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
+	.dropdown-wrapper a{
+		width:0px;
+		padding: 15px;
+		color: #fff;
+		text-decoration: none;
+	}
 
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+	.dropdown-wrapper a:hover, .dropdown-wrapper .dropdown-menu:hover {
+		color: #ffe945;
+		background: var(--c-body);
+		width: 315%;
+		cursor: pointer;
+		transition: all 1s;
+	}
+	
+	.dropdown-menu {
+    overflow:hidden;
 
-/* Add a grey background color on mouse-over */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+    position: absolute;  /* <-- added declarations */
+    left: 0; top: -30%;  /*     here               */
+    width: 100%;         /*     and here...        */
 
-/* Style the active link (or home/logo) */
-.active {
-  background-color: #04AA6D;
-  color: white;
-}
+	z-index: 12;
+	}
 
-	@media screen and (max-width: 640px){
-		.dropdown-wrapper{
-			display: block;
-		}
-		
+	.dropdown-items {
+		/* This is the item that gets colored for each menu item */
+		width: 100%;
+		position: absolute;
+		top: 100%; left: 0;
+		display: none;
+	}
+
+	.dropdown-items a {
+		display:block;
+		box-sizing: border-box;
+	}
+
+	.dropdown-menu:hover .dropdown-items {
+		display: block;
+	}
+
+
+
+	@media screen and (max-width: 639px){
 		.dropdown-menu{
 			flex-wrap: wrap;
 		}
