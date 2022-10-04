@@ -15,7 +15,7 @@ body {
     color: aqua;
     font-family:helvetica;
     font-size:25px;
-    padding-left:10px;
+    padding-left: 1rem;
     box-sizing:border-box;
   }
   #slide_nav_button {
