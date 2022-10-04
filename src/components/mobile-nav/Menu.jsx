@@ -21,6 +21,7 @@ class SlideOutMenuContainer extends React.Component {
                       <li><a href="/blogs">Blog</a></li>
                       <li><a href="/resume">Resume(CV)</a></li>
                       <li><a href="/about">About</a></li>
+                      <li><a href="/404">404 Test</a></li>
                   </ul>
             </div>
         </div>

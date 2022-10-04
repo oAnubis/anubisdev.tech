@@ -5,7 +5,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import "../styles/animatetext.scss";
-import Dropdown from "../components/mobile-nav/Dropdown.astro"
+
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = await Astro.glob('./project/**/*.md');
@@ -25,6 +25,7 @@ const featuredProject = projects[0];
 			description="Brandon Coburn: Developer, Student, and Gamer..."
 		/>
 		<style>
+			/* Default Styling */
 			.wrapper {
 				margin-top: 2em;
 				margin-bottom: 2em;
@@ -38,13 +39,7 @@ const featuredProject = projects[0];
 			.body {
 				background-color: var(--c-body);
 			}
-
-			@media (min-width: 750px) {
-				.hero {
-					height: 45vw;
-				}
-			}
-
+			
 			.img {
 				display: block;
 				width: 100%;
@@ -81,20 +76,7 @@ const featuredProject = projects[0];
 				flex-direction: column;
 				align-items: flex-start;
 				justify-content: center;
-				padding-left: 2rem;
-			}
-
-			@media (min-width: 750px) {
-				.overlay {
-					padding-left: 4rem;
-					padding-top: 1rem;
-				}
-			}
-
-			@media (max-width: 424px){
-				.Scroll {
-					display: none;
-				}
+				padding-left: 1rem;
 			}
 
 			.title {
@@ -104,33 +86,9 @@ const featuredProject = projects[0];
 				margin-top: 0;
 			}
 
-			@media (min-width: 750px) {
-				.title {
-					font-size: var(--f-u12);
-				}
-			}
-
-			@media (max-width: 320px){
-				.title {
-					font-size: 2.1em;
-				}
-			}
-
-			@media (max-width: 375px) {
-				.overlay {
-					padding-left: 24px;
-				}
-			}
-
 			.grid {
 				display: grid;
 				grid-gap: 2rem;
-			}
-
-			@media (min-width: 1200px) {
-				.grid {
-					grid-template-columns: 2fr 1fr;
-				}
 			}
 
 			.sectionTitle {
@@ -140,6 +98,7 @@ const featuredProject = projects[0];
 				text-decoration: underline;
 				margin-top: 1rem;
 				margin-bottom: 2rem;
+				text-align: center;
 			}
 
 			.roles {
@@ -147,14 +106,10 @@ const featuredProject = projects[0];
 				flex-wrap: wrap;
 				gap: 0.5em;
 				font-size: var(--f-d1);
+				padding-right: 1em;
 			}
 
-			@media (max-width: 385px){
-				.roles{
-					font-size: 0.831428283688879em;
-				}
-			}
-
+			
 			.role {
 				position: relative;
 				display: inline-block;
@@ -164,12 +119,6 @@ const featuredProject = projects[0];
 				background-color: var(--t-fg);
 				padding: 0.25em 0.5em;
 				z-index: 2;
-			}
-
-			@media (min-width: 750px) {
-				.role {
-					font-size: var(--f-u3);
-				}
 			}
 
 			.role:nth-of-type(1) .invert {
@@ -256,6 +205,59 @@ const featuredProject = projects[0];
 				-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 				transition: all 0.3s ease 0s;
 			}
+
+			/* Responsive Design */
+
+			@media (min-width: 1200px) {
+				.grid {
+					grid-template-columns: 2fr 1fr;
+				}
+			}
+
+			@media (min-width: 750px) {
+				.overlay {
+					padding-left: 4rem;
+					padding-top: 1rem;
+				}
+
+				.hero {
+					height: 45vw;
+				}
+
+				.title {
+					font-size: var(--f-u12);
+				}
+
+				.role {
+					font-size: var(--f-u3);
+				}
+			}
+
+			@media (max-width: 390px){
+				.roles{
+					font-size: 0.831428283688879em;
+				}
+
+				.sectionTitle {
+					font-size: 40px;
+				}
+			}
+
+			@media (max-width: 374px) {
+				.overlay {
+					padding-left: 24px;
+				}
+			}
+
+			@media (max-width: 320px){
+				.title {
+					font-size: 2.1em;
+				}
+
+				.sectionTitle {
+					font-size: 35px;
+				}
+			}
 		</style>
 
 
@@ -282,24 +284,7 @@ const featuredProject = projects[0];
 					<span class="role">🎓 Student <span class="invert">🎓 Student</span></span>
 					<span class="role">🎮 Gamer <span class="invert">🎮 Gamer</span></span>
 				</div>
-				
-				<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-				<div class="Scroll">
-					<div class="content">
-						<div class="content__container">
-						  <p class="content__container__text">
-							Loves:
-						  </p>
-						  <ul class="content__container__list">
-							<li class="content__container__list__item">OOP !</li>
-							<li class="content__container__list__item">C#/C++ !</li>
-							<li class="content__container__list__item">.NET !</li>
-							<li class="content__container__list__item">Databases !</li>
-						  </ul>
-						</div>
-					  </div>
-					</div>
-				</div>
+			</div>
 		</header>
 		<main class="wrapper">
 			<div class="grid">
