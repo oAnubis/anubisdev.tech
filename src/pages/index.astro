@@ -5,6 +5,7 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import "../styles/animatetext.scss";
+import Dropdown from "../components/mobile-nav/Dropdown.astro"
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = await Astro.glob('./project/**/*.md');
@@ -259,6 +260,7 @@ const featuredProject = projects[0];
 
 	</head>
 	<body class="body">
+		<!-- <Dropdown client:load/> -->
 		<Nav />
 		<header class="hero">
 			<img

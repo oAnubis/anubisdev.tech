@@ -1,0 +1,161 @@
+nav {
+    background-color: var(--c-navbar);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 640px) {
+    .link {
+        display: none !important;
+    }
+}
+
+.link {
+    color: var(--c-navlink);
+    display: block;
+    text-decoration: none;
+    font-size: var(--f-d1);
+    text-transform: uppercase;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+}
+
+.link:hover,
+.link:focus {
+    color: var(--c-navlinkhover);
+}
+
+.monogram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    margin-right: 0.5rem;
+    color: purple;
+    font-weight: 900;
+    letter-spacing: -0.125rem;
+    border: 3px solid currentColor;
+    border-radius: 50%;
+}
+
+.socials {
+    display: flex;
+    gap: 0.75em;
+    margin-left: auto;
+}
+
+.social {
+    display: block;
+}
+
+.socialIcon {
+    position: relative; 
+      display: block;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 63px;
+      background: var(--c-iconbackground);
+      border-radius: 50%;
+      font-size: 30px;
+      color: var(--c-navlink);
+      transition: .5s;
+}
+
+.socialIcon::before{
+    content: '';
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: var(--c-iconhover);
+      transition: .5s;
+      transform: scale(.9);
+      z-index: -1;
+}
+
+.socialIcon:hover::before{
+    transform: scale(1.1);
+      box-shadow: 0 0 15px var(--c-iconhover);
+}
+
+.socialIcon:hover {
+    color: purple;
+      box-shadow: 0 0 10px var(--c-iconhover);
+      text-shadow: 0 0 10px var(--c-iconhover);
+}
+
+.dropdown-wrapper {
+    float: left;
+    display: relative;
+    position: relative;
+    /* This is hiding the menu */
+    
+}
+
+.dropdown-wrapper .dropdown-menu {
+    width: 0%;
+    padding: 15px;
+    background: #1f1e1e;
+}
+
+.dropdown-wrapper a{
+    width:0px;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-wrapper a:hover, .dropdown-wrapper .dropdown-menu:hover {
+    color: #ffe945;
+    background: var(--c-body);
+    width: 315%;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.dropdown-menu {
+overflow:hidden;
+
+position: absolute;  /* <-- added declarations */
+left: 0; top: -30%;  /*     here               */
+width: 100%;         /*     and here...        */
+
+z-index: 12;
+}
+
+.dropdown-items {
+    /* This is the item that gets colored for each menu item */
+    width: 100%;
+    position: absolute;
+    top: 100%; left: 0;
+    display: none;
+}
+
+.dropdown-items a {
+    display:block;
+    box-sizing: border-box;
+}
+
+.dropdown-menu:hover .dropdown-items {
+    display: block;
+}
+
+
+
+@media screen and (max-width: 639px){
+    .dropdown-menu{
+        flex-wrap: wrap;
+    }
+
+    .dropdown-items{
+        position: static;
+        margin-top: 10px;
+    }
+}
+

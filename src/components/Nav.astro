@@ -1,208 +1,30 @@
 ---
 import "../styles/global.css";
+import "../styles/Nav.css";
+import Menu from "../components/mobile-nav/Menu.jsx"
+import Dropdown from "../components/mobile-nav/Dropdown.astro"
+import NavBar from "../components/desktop-nav/NavBar.astro"
 ---
 
 <nav class="tablet-plus">
-	<nav class="dropdown-wrapper">
-		<div class="dropdown-menu">
-				&#9776;
-				<div class="dropdown-items">
-					<a class="ddlink" href="/projects/"> Portfolio </a>
-					<a class="ddlink" href="/blogs/"> Blog </a>
-					<a class="ddlink" href="/resume/"> Resume(CV) </a>
-					<a class="ddlink" href="/about/"> About </a>
-					<a class="ddlink" href="/404/"> 404 Test</a>
-				</div>
-		</div>
-	</nav>
-	<a class="link" href="/">
-		<div class="monogram">BC</div>
-	</a>
-	<a class="link" href="/"> Landing</a>
-	<a class="link" href="/projects/"> Portfolio </a>
-	<a class="link" href="/blogs/"> Blog </a>
-	<a class="link" href="/resume/"> Resume(CV) </a>
-	<a class="link" href="/about/"> About </a>
-	<a class="link" href="/404/"> 404 Test</a>
-	<div class="socials">
-		<a class="social" href="https://www.linkedin.com/in/coburnbrandon/">
-			<svg class="socialIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-				<path
-					d="M 20.447 20.452 h -3.554 v -5.569 c 0 -1.328 -0.027 -3.037 -1.852 -3.037 c -1.853 0 -2.136 1.445 -2.136 2.939 v 5.667 H 9.351 V 9 h 3.414 v 1.561 h 0.046 c 0.477 -0.9 1.637 -1.85 3.37 -1.85 c 3.601 0 4.267 2.37 4.267 5.455 v 6.286 Z M 5.337 7.433 c -1.144 0 -2.063 -0.926 -2.063 -2.065 c 0 -1.138 0.92 -2.063 2.063 -2.063 c 1.14 0 2.064 0.925 2.064 2.063 c 0 1.139 -0.925 2.065 -2.064 2.065 Z m 1.782 13.019 H 3.555 V 9 h 3.564 v 11.452 Z M 22.225 0 H 1.771 C 0.792 0 0 0.774 0 1.729 v 20.542 C 0 23.227 0.792 24 1.771 24 h 20.451 C 23.2 24 24 23.227 24 22.271 V 1.729 C 24 0.774 23.2 0 22.222 0 h 0.003 Z"
-				></path>
-			</svg>
-		</a>
-		<a class="social" href="https://github.com/oAnubis">
-			<svg class="socialIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-				<path
-					d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-				></path>
-			</svg>
-		</a>
-	</div>
+	<NavBar />
+</nav>
+<nav class = "mobile">
+	<Dropdown />
 </nav>
 
 <style>
-	nav {
-		background-color: var(--c-navbar);
-		display: flex;
-		gap: 1rem;
-		align-items: center;
-		padding: 1rem;
-	}
 
-	@media only screen and (max-width: 640px) {
-		.link {
-			display: none !important;
+	@media (min-width: 641px){
+		.mobile {
+			display: none;
 		}
 	}
 
-	.link {
-		color: var(--c-navlink);
-		display: block;
-		text-decoration: none;
-		font-size: var(--f-d1);
-		text-transform: uppercase;
-		padding-top: 0.75em;
-		padding-bottom: 0.75em;
-	}
-
-	.link:hover,
-	.link:focus {
-		color: var(--c-navlinkhover);
-	}
-
-	.monogram {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 2em;
-		height: 2em;
-		margin-right: 0.5rem;
-		color: purple;
-		font-weight: 900;
-		letter-spacing: -0.125rem;
-		border: 3px solid currentColor;
-		border-radius: 50%;
-	}
-
-	.socials {
-		display: flex;
-		gap: 0.75em;
-		margin-left: auto;
-	}
-
-	.social {
-		display: block;
-	}
-
-	.socialIcon {
-		position: relative; 
-  		display: block;
-  		width: 30px;
-  		height: 30px;
-  		text-align: center;
-  		line-height: 63px;
-  		background: var(--c-iconbackground);
-  		border-radius: 50%;
-  		font-size: 30px;
-  		color: var(--c-navlink);
-  		transition: .5s;
-	}
-
-	.socialIcon::before{
-		content: '';
-		position: absolute;
-  		top: 0;
-  		left: 0;
-  		width: 100%;
-  		height: 100%;
-  		border-radius: 50%;
-  		background: var(--c-iconhover);
-  		transition: .5s;
-  		transform: scale(.9);
-  		z-index: -1;
-	}
-
-	.socialIcon:hover::before{
-		transform: scale(1.1);
-  		box-shadow: 0 0 15px var(--c-iconhover);
-	}
-
-	.socialIcon:hover {
-		color: ;
-  		box-shadow: 0 0 10px var(--c-iconhover);
-  		text-shadow: 0 0 10px var(--c-iconhover);
-	}
-
-	.dropdown-wrapper {
-		float: left;
-		display: relative;
-		position: relative;
-		/* This is hiding the menu */
-		display:none;
-	}
-
-	.dropdown-wrapper .dropdown-menu {
-		width: 0%;
-		padding: 15px;
-		background: #1f1e1e;
-	}
-
-	.dropdown-wrapper a{
-		width:0px;
-		padding: 15px;
-		color: #fff;
-		text-decoration: none;
-	}
-
-	.dropdown-wrapper a:hover, .dropdown-wrapper .dropdown-menu:hover {
-		color: #ffe945;
-		background: var(--c-body);
-		width: 315%;
-		cursor: pointer;
-		transition: all 1s;
-	}
-	
-	.dropdown-menu {
-    overflow:hidden;
-
-    position: absolute;  /* <-- added declarations */
-    left: 0; top: -30%;  /*     here               */
-    width: 100%;         /*     and here...        */
-
-	z-index: 12;
-	}
-
-	.dropdown-items {
-		/* This is the item that gets colored for each menu item */
-		width: 100%;
-		position: absolute;
-		top: 100%; left: 0;
-		display: none;
-	}
-
-	.dropdown-items a {
-		display:block;
-		box-sizing: border-box;
-	}
-
-	.dropdown-menu:hover .dropdown-items {
-		display: block;
-	}
-
-
-
-	@media screen and (max-width: 639px){
-		.dropdown-menu{
-			flex-wrap: wrap;
-		}
-
-		.dropdown-items{
-			position: static;
-			margin-top: 10px;
+	@media (max-width: 640px){
+		.tablet-plus {
+			display: none;
 		}
 	}
-
 
 </style>
