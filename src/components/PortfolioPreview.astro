@@ -170,8 +170,14 @@ const { frontmatter, url } = Astro.props.project;
 		color: var(--c-pink);
 	}
 
+	@media (min-width: 767px){
+		.title{
+			font-size: 30px;
+		}
+	}
 
-	@media (min-width: 481px){
+
+	@media (min-width: 481px) and (max-width: 767px) {
 		.title{
 			font-size: 15px;
 		}
