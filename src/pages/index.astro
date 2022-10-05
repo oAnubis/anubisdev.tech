@@ -108,6 +108,7 @@ const featuredPost = posts[0];
 			.flexbox {
 					display: flex;
 					gap: 1em;
+					justify-content: center;
 				}
 
 			.sectionTitle {
@@ -233,15 +234,59 @@ const featuredPost = posts[0];
 					text-align: center;
 				}
 
+			#post3{
+				display:none;
+			}
+
+			#passion{
+				display:none;
+			}
+
 			/* Responsive Design */
 
 			@media (min-width: 1200px) {
-				.grid {
-					grid-template-columns: 2fr;
-				}
+				
 			}
 
-			@media (min-width: 768px){
+			@media (min-width: 1200px){
+				.flexbox{
+					justify-content: center;
+				}
+
+				.flexbox-bottom{
+					display: flex;
+					gap: 2rem;
+				}
+
+				#bio{
+
+				}
+
+				#passion{
+					display:block;
+					min-width: 40%;
+					margin-left: 4em;
+				}
+
+			}
+
+
+			@media (min-width: 1024px){
+				#post3{
+					display: inline-block;
+				}
+				
+				.title {
+					font-size: var(--f-u12);
+				}
+
+				.hero {
+					height: 45vw;
+				}
+
+			}
+
+			@media (min-width: 768px) and (max-width: 1199px){
 				.overlay {
 					padding-left: 4rem;
 					padding-top: 1rem;
@@ -359,6 +404,12 @@ const featuredPost = posts[0];
 							<a href="/blogs/" class="button">View All</a>
 						</div>
 					</div>
+					<div class="section" id="post3">
+						<BlogPreview post={featuredPost}/>
+						<div class="buttonContainer">
+							<a href="/blogs/" class="button">View All</a>
+						</div>
+					</div>
 				</div>
 				<h3 class="sectionTitle">Selected Work</h3>
 				<div class="flexbox">
@@ -368,31 +419,44 @@ const featuredPost = posts[0];
 							<a href="/projects/" class="button">View All</a>
 						</div>
 					</div>
-					<div class="section">
+					<!-- <div class="section">
 						<PortfolioPreview project={featuredProject} />
 						<div class="buttonContainer">
 							<a href="/projects/" class="button">View All</a>
 						</div>
+					</div> -->
+				</div>
+				<div class="flexbox-bottom">
+					<div class="section" id="bio">
+						<div class="words">
+							<h3 class="sectionTitle">About me</h3>
+							<p class="bio">
+								<span>Hello World!🙋‍♂️</span> I love learning new and exciting technologies, techniques, and concepts with the goal of 
+								learning something new each day.
+								<br><br>
+								I am currently enrolled at Full Sail University, pursuing a Bachelor's in Game Development, heavily focused
+								on OOP principles, design patterns, algorithms and database management.
+							</p>
+							<p>
+								<div class="buttonContainer2">
+									<a href="/about" class="button">Read My Full Bio!</a>
+								</div>
+							</p>
+						</div>
+					</div>
+					<div class="section" id="passion">
+						<h3 class="sectionTitle">Passions</h3>
+						<div>
+							<ol>
+								<h2>Coming Soon!</h2>
+								<!-- <li>Object-Oriented Programming</li>
+								<li>Database Management</li>
+								<li>APIs</li> -->
+							</ol>
+						</div>
 					</div>
 				</div>
-				<h3 class="sectionTitle">About me</h3>
-				<div class="section">
-					<div class="words">
-						<p class="bio">
-							<span>Hello World!🙋‍♂️</span> I love learning new and exciting technologies, techniques, and concepts with the goal of 
-							learning something new each day.
-							<br><br>
-							I am currently enrolled at Full Sail University, pursuing a Bachelor's in Game Development, heavily focused
-							on OOP principles, design patterns, algorithms and database management.
-						</p>
-					</div>
-						<p>
-							<div class="buttonContainer2">
-								<a href="/about" class="button">Read My Full Bio!</a>
-							</div>
-						</p>
-					</div>
-				</div>
+			</div>
 			</main>
 			<Footer />
 		</body>
