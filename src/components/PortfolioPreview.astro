@@ -62,6 +62,7 @@ const { frontmatter, url } = Astro.props.project;
 		font-weight: 900;
 		text-transform: uppercase;
 		letter-spacing: 0.0625em;
+		text-align: center;
 	}
 
 	.titleCard {
@@ -169,10 +170,17 @@ const { frontmatter, url } = Astro.props.project;
 		color: var(--c-pink);
 	}
 
+
+	@media (min-width: 481px){
+		.title{
+			font-size: 15px;
+		}
+	}
+
 	@media (max-width: 480px){
 		.title {
 			font-size: 14px;
-			text-align: center;
+			
 		}
 
 		.desc{

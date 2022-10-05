@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/post.astro"
 title: "First post"
-description: "Lorem ipsum dolor sit amet"
+description: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit"
 shortdesc: "Placeholder"
 pubDate: "Jul 08 2022"
 heroImage: "/placeholder-hero.jpg"
