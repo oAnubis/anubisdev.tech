@@ -94,7 +94,20 @@ const featuredPost = posts[0];
 			.grid {
 				display: grid;
 				grid-gap: 2rem;
+				grid-template-columns:
+					"t"
+					"b"
+					"t"
+					"p"
+					"a";
+
+				gap: 0rem;
 			}
+
+			.flexbox {
+					display: flex;
+					gap: 1em;
+				}
 
 			.sectionTitle {
 				color: var(--c-titletext);
@@ -215,6 +228,10 @@ const featuredPost = posts[0];
 				transition: all 0.3s ease 0s;
 			}
 
+			.words{
+					text-align: center;
+				}
+
 			/* Responsive Design */
 
 			@media (min-width: 1200px) {
@@ -223,7 +240,7 @@ const featuredPost = posts[0];
 				}
 			}
 
-			@media (min-width: 750px) {
+			@media (min-width: 768px){
 				.overlay {
 					padding-left: 4rem;
 					padding-top: 1rem;
@@ -240,25 +257,26 @@ const featuredPost = posts[0];
 				.role {
 					font-size: var(--f-u3);
 				}
+
+				.flexbox {
+					justify-content:left;
+				}
+
+				.section {
+					
+				}
+
+				#blogtitle {
+					margin-top: 0rem;
+					margin-bottom: 1em;
+				}
+			}
+
+			@media (min-width: 481px){
+				
 			}
 
 			@media (max-width: 480px) {
-				.flexbox {
-					display: flex;
-					gap: 1em;
-				}
-
-				.grid {
-					grid-template-columns:
-					"t"
-					"b"
-					"t"
-					"p"
-					"a";
-
-					gap: 0rem;
-				}
-
 				.sectionTitle {
 					margin-top: 0em;
 					font-size: 40px;
@@ -266,10 +284,6 @@ const featuredPost = posts[0];
 
 				.buttonContainer {
 					margin-bottom: 2rem;
-				}
-
-				.words{
-					text-align: center;
 				}
 
 				.overlay{
@@ -284,6 +298,7 @@ const featuredPost = posts[0];
 					font-size: 0.831428283688879em;
 					
 				}
+				
 			}
 
 			@media (min-width: 320px) {
@@ -329,7 +344,7 @@ const featuredPost = posts[0];
 		</header>
 		<main class="wrapper">
 			<div class="grid">
-				<h3 class="sectionTitle">Recent Blogs</h3>
+				<h3 class="sectionTitle" id="blogtitle">Recent Blogs</h3>
 				<div class="flexbox">
 					<div class="section">
 						<BlogPreview post={featuredPost}/>
