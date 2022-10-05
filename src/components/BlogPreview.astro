@@ -8,6 +8,7 @@ const { frontmatter, url } = Astro.props.post;
 		<h1 class="title">{frontmatter.title}</h1>
 	</div>
 	<div class="descCard">
+		<p class="sdesc">{frontmatter.shortdesc}</p>
 		<p class="desc">{frontmatter.description}</p>
 		<p class="date">{frontmatter.pubDate}</p>
 		<a class="link" href={url}>
@@ -59,6 +60,10 @@ const { frontmatter, url } = Astro.props.post;
 		line-height: 1.4;
 		margin-top: 0em;
 		margin-bottom: 1em;
+	}
+
+	.sdesc {
+		display: none;
 	}
 
 	.link {
@@ -146,5 +151,26 @@ const { frontmatter, url } = Astro.props.post;
 	}
 	.tag:nth-of-type(4n) {
 		color: var(--c-pink);
+	}
+
+	@media (max-width: 480px){
+		.title {
+			font-size: 14px;
+			text-align: center;
+		}
+
+		.descCard{
+			padding: .1em;
+			text-align: center;
+		}
+
+		.sdesc{
+			display:block;
+			text-align: center;
+		}
+		
+		.titleCard{
+			padding-top: 50%;
+		}
 	}
 </style>

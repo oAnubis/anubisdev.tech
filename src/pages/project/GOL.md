@@ -7,6 +7,8 @@ publishDate: 2020-03-02 00:00:00
 img: ../../assets/GOL.png
 description: |
   My version of John Conway's Game of Life Cellular Automata, taking a heavily Object-Oriented approach. (WIP)
+shortdesc: |
+  Conway's GOL in OOP
 tags:
 - -oop- 
 - -winforms-

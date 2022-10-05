@@ -8,8 +8,16 @@ const { frontmatter, url } = Astro.props.project;
 	</div>
 	<div class="descCard">
 		<p class="desc">{frontmatter.description}</p>
+		<p class="sdesc">{frontmatter.shortdesc}</p>
 		<div class="tags">
 			Tagged:
+			{frontmatter.tags.map((t: unknown) => (
+				<div class="tag" data-tag={t}>
+					{t}
+				</div>
+			))}
+		</div>
+		<div class="stags">
 			{frontmatter.tags.map((t: unknown) => (
 				<div class="tag" data-tag={t}>
 					{t}
@@ -28,6 +36,14 @@ const { frontmatter, url } = Astro.props.project;
 		color: var(--t-bg);
 		background: var(--t-fg);
 		border: 1px solid #f0f0f0;
+	}
+
+	.sdesc{
+		display:none;
+	}
+
+	.stags{
+		display:none;
 	}
 
 	.title {
@@ -151,5 +167,40 @@ const { frontmatter, url } = Astro.props.project;
 	}
 	.tag:nth-of-type(4n) {
 		color: var(--c-pink);
+	}
+
+	@media (max-width: 480px){
+		.title {
+			font-size: 14px;
+			text-align: center;
+		}
+
+		.desc{
+			display: none;
+		}
+
+		.descCard{
+			padding: .1em;
+		}
+
+		.sdesc{
+			display:block;
+			text-align: center;
+		}
+		
+		.tags{
+			display: none;
+		}
+
+		.stags {
+			display: block;
+			font-size: 10px;
+			text-align: center;
+			margin-top: 2em;
+		}
+
+		.titleCard{
+			padding-top: 50%;
+		}
 	}
 </style>

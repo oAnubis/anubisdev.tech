@@ -4,12 +4,17 @@ import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
+import BlogPreview from '../components/BlogPreview.astro';
 import "../styles/animatetext.scss";
 
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = await Astro.glob('./project/**/*.md');
 const featuredProject = projects[0];
+
+
+const posts = await Astro.glob('./blog/**/*.md');
+const featuredPost = posts[0];
 
 
 
@@ -184,6 +189,10 @@ const featuredProject = projects[0];
 				margin-top: 2em;
 			}
 
+			.buttonContainer2 {
+				text-align: center;
+			}
+
 			.button{
 				border: none;
 				background: var(--c-buttonbackground);
@@ -210,7 +219,7 @@ const featuredProject = projects[0];
 
 			@media (min-width: 1200px) {
 				.grid {
-					grid-template-columns: 2fr 1fr;
+					grid-template-columns: 2fr;
 				}
 			}
 
@@ -258,6 +267,48 @@ const featuredProject = projects[0];
 					font-size: 35px;
 				}
 			}
+
+			@media (max-width: 480px) {
+				.flexbox {
+					display: flex;
+					gap: 1em;
+				}
+
+				.grid {
+					grid-template-columns:
+					"t"
+					"b"
+					"t"
+					"p"
+					"a";
+
+					gap: 0rem;
+				}
+
+				.sectionTitle {
+					margin-top: 0em;
+				}
+
+				.buttonContainer {
+					margin-bottom: 2rem;
+				}
+
+				.words{
+					text-align: center;
+				}
+
+				.overlay{
+					height: 130%;
+				}
+				
+				.heroimage{
+					height: 200px;
+				}
+
+				.roles {
+					
+				}
+			}
 		</style>
 
 
@@ -265,7 +316,7 @@ const featuredProject = projects[0];
 	<body class="body">
 		<Nav />
 		<header class="hero">
-			<img
+			<img  class="heroimage"
 				width="1600"
 				height="1131"
 				class="img"
@@ -288,30 +339,55 @@ const featuredProject = projects[0];
 		</header>
 		<main class="wrapper">
 			<div class="grid">
-				<div class="section">
-					<h3 class="sectionTitle">Selected Work</h3>
-					<PortfolioPreview project={featuredProject} />
-					<div class="buttonContainer">
-						<a href="/projects/" class="button">View All</a>
+				<h3 class="sectionTitle">Recent Blogs</h3>
+				<div class="flexbox">
+					<div class="section">
+						<BlogPreview post={featuredPost}/>
+						<div class="buttonContainer">
+							<a href="/blogs/" class="button">View All</a>
+						</div>
+					</div>
+					<div class="section">
+						<BlogPreview post={featuredPost}/>
+						<div class="buttonContainer">
+							<a href="/blogs/" class="button">View All</a>
+						</div>
 					</div>
 				</div>
-				<div class="section">
-					<h3 class="sectionTitle">About me</h3>
-					<p class="bio">
-						<span>Hello World!🙋‍♂️</span> I love learning new and exciting technologies, techniques, and concepts with the goal of 
-						learning something new each day.
-						<br><br>
-						I am currently enrolled at Full Sail University, pursuing a Bachelor's in Game Development, heavily focused
-						on OOP principles, design patterns, algorithms and database management.
-					</p>
-					<p>
-						<div class="buttonContainer2">
-							<a href="/about" class="button">Read My Full Bio!</a>
+				<h3 class="sectionTitle">Selected Work</h3>
+				<div class="flexbox">
+					<div class="section">
+						<PortfolioPreview project={featuredProject} />
+						<div class="buttonContainer">
+							<a href="/projects/" class="button">View All</a>
 						</div>
-					</p>
+					</div>
+					<div class="section">
+						<PortfolioPreview project={featuredProject} />
+						<div class="buttonContainer">
+							<a href="/projects/" class="button">View All</a>
+						</div>
+					</div>
 				</div>
-			</div>
-		</main>
-		<Footer />
-	</body>
-</html>
+				<h3 class="sectionTitle">About me</h3>
+				<div class="section">
+					<div class="words">
+						<p class="bio">
+							<span>Hello World!🙋‍♂️</span> I love learning new and exciting technologies, techniques, and concepts with the goal of 
+							learning something new each day.
+							<br><br>
+							I am currently enrolled at Full Sail University, pursuing a Bachelor's in Game Development, heavily focused
+							on OOP principles, design patterns, algorithms and database management.
+						</p>
+					</div>
+						<p>
+							<div class="buttonContainer2">
+								<a href="/about" class="button">Read My Full Bio!</a>
+							</div>
+						</p>
+					</div>
+				</div>
+			</main>
+			<Footer />
+		</body>
+	</html>
