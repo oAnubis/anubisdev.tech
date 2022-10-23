@@ -13,7 +13,7 @@ const { frontmatter, url } = Astro.props.post;
 		<p class="desc">{frontmatter.description}</p>
 		<p class="date">{frontmatter.pubDate}</p>
 		<a class="link" href={url}>
-			<span class="linkInner">View</span>
+			<!-- <span class="linkInner">View</span> -->
 		</a>
 	</div>
 </div>
@@ -69,8 +69,9 @@ const { frontmatter, url } = Astro.props.post;
 	.desc {
 		font-size: var(--f-u1);
 		line-height: 1.4;
-		margin-top: 0em;
+		margin-top: 1em;
 		margin-bottom: 1em;
+		color: white;
 	}
 
 	.sdesc {

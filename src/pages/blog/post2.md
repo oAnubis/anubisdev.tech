@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/post.astro"
-title: "First post Coming Soon!"
+title: "Next post Coming Soon!"
 description: "Lorem ipsum dolor sit amet lorem ipsum dolor sit"
 shortdesc: "Placeholder"
 pubDate: "Jul 08 2022"

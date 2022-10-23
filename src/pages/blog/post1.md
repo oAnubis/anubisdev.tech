@@ -61,11 +61,6 @@ author1: Francis,B.
 				margin-top: 2em;
 				border-top: 1px solid #DDD;
 			}
-    
-    .reference{
-        
-        
-    }
 </style>
 We see it all the time, in movies, commercials, and even the news, AI is bad. But is it really? As a Game Developer, I’m  inclined to say no, I want more! The game industry is fraught with the notion that AI tools used to generate content are destroying uniqueness in current video games being created by removing the human element in key parts of the development cycle. From a purely technical standpoint this holds little possibility, they are designed specifically for uniqueness, which actually makes it more difficult to generate a full set of coherent concept art. Now, on a side everyone can relate to is price; they are not cheap, either the hardware to run them efficiently in the first place is tremendously expensive or the price to generate even one image will add up, I will dive into the latter in more detail in a bit. What about the future as prices go down? Fear not fellow gamers and developers, the human element is still very much involved in the process the tools are “replacing”, as I will explain.
 </br>
