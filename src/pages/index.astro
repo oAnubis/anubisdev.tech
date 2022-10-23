@@ -14,7 +14,9 @@ const featuredProject = projects[0];
 
 
 const posts = await Astro.glob('./blog/**/*.md');
-const featuredPost = posts[0];
+const postOne = posts[0];
+const postTwo = posts[1];
+const postThree = posts[2];
 
 
 
@@ -393,19 +395,19 @@ const featuredPost = posts[0];
 				<h3 class="sectionTitle" id="blogtitle">Recent Blogs</h3>
 				<div class="flexbox">
 					<div class="section">
-						<BlogPreview post={featuredPost}/>
+						<BlogPreview post={postOne}/>
 						<div class="buttonContainer">
 							<a href="/blogs/" class="button">View All</a>
 						</div>
 					</div>
 					<div class="section">
-						<BlogPreview post={featuredPost}/>
+						<BlogPreview post={postTwo}/>
 						<div class="buttonContainer">
 							<a href="/blogs/" class="button">View All</a>
 						</div>
 					</div>
 					<div class="section" id="post3">
-						<BlogPreview post={featuredPost}/>
+						<BlogPreview post={postThree}/>
 						<div class="buttonContainer">
 							<a href="/blogs/" class="button">View All</a>
 						</div>
