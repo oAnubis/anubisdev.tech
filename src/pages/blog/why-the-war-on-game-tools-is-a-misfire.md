@@ -89,7 +89,7 @@ I generated the three images above using an AI tool called Stable Diffusion. I r
 </br>
 </br>
 <p>
-Oliver Mackenzie(2022) had a similar experience in his <a href="https://www.eurogamer.net/digitalfoundry-2022-just-how-good-are-the-new-wave-of-ai-image-generation-tools">article on AI tools</a> stating, "Actually working out a coherent aesthetic across multiple pieces of artwork can be tricky". (para. 14) Indeed, this could end up being extremely time consuming as it sits right now. Stable Diffusion utilizes the GPU (Graphics Processing Unit) to render these new images, it took roughly 10 seconds to create each of the three images above. Imagine 10 seconds per image, you need 100 similar images, only 1 in 50 would fit together. I'll save you time, that would take roughly 13.8 hours. That time is only the processing time, this does not count how long it would take to parse through and select the images, which would add much more to that time.
+Oliver Mackenzie(2022) had a similar experience in his <a href="https://www.eurogamer.net/digitalfoundry-2022-just-how-good-are-the-new-wave-of-ai-image-generation-tools">article on AI tools</a> stating, "Actually working out a coherent aesthetic across multiple pieces of artwork can be tricky" (para. 14). Indeed, this could end up being extremely time consuming as it sits right now. Stable Diffusion utilizes the GPU (Graphics Processing Unit) to render these new images, it took roughly 10 seconds to create each of the three images above. Imagine 10 seconds per image, you need 100 similar images, only 1 in 50 would fit together. I'll save you time, that would take roughly 13.8 hours. That time is only the processing time, this does not count how long it would take to parse through and select the images, which would add much more to that time.
 <p>
 </br>
 </br>
@@ -102,7 +102,7 @@ One of the loudest arguments against these AI tools is the potential to replace 
 </br>
 </br>
 <p>
-Bryant Francis(2022) expresses this quite nicely in his <a href="https://www.gamedeveloper.com/blogs/games-and-game-tools-are-becoming-more-frictionless-that-might-be-a-bad-thing">article</a> when he says "games will risk losing the spontaneity that can come with working through a performance in a V.O. booth." (para. 48)
+Bryant Francis(2022) expresses this quite nicely in his <a href="https://www.gamedeveloper.com/blogs/games-and-game-tools-are-becoming-more-frictionless-that-might-be-a-bad-thing">article</a> when he says "games will risk losing the spontaneity that can come with working through a performance in a V.O. booth" (para. 48).
 </br>
 </br>
 I think that is a valid concern, however, a human still needs to run these tools, the same process could be followed, editing together output from these tools. Unless the entire process of developing a video game becomes AI (I hope not) that human element in creativity and imagination will still very much be present, think of it as more of an augmentation than a full replacement. As with everything, there is a potential for overuse, which could lead to some really dull or otherwise stale creations, but gamers are not known to be silent with their criticisms, thinking back to the launch of No Man's Sky by Hello Games confirms this. I think that market dynamic will be a huge driving force that will keep the usage in the grand scale balanced.
