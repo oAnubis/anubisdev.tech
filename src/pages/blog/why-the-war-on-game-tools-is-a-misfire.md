@@ -97,7 +97,7 @@ Oliver Mackenzie(2022) had a similar experience in his <a href="https://www.euro
 A topic everyone can relate too regardless of your field is price, what do they cost? Well, as I stated above, Stable Diffusion can run directly on your machine and the program itself is free, that's pretty low cost right? Well, not really, to run efficiently the program requires a pretty beefy GPU, I am using an RTX 2080 Ti which you can get for around $700. That is not exactly a small investment just to run a tool locally (especially if you need to build a new PC instead of just a better GPU). Well what about online options so you don't need to build a new PC? The biggest player is DALL-E, it can be operated purely online no "monster" PC needed. Two problems, the tool is invite only, and it is $0.10 per image. Let's say you are able to get an invite, taking from our previous example of 1 in 50 with 100 images needed, roughly 5,000 images would be required to be generated, this would be $500. Not exactly a better option, you can see how that would add up quickly, especially if you needed more art, or if your chances fall outside the average. 
 </br>
 </br>
-<h1 class="section-title">Humans are very much still involved in the design process, and will be for some time.</h1>
+<h1 class="section-title">Humans are still very much involved in the design process, and will be for some time.</h1>
 One of the loudest arguments against these AI tools is the potential to replace the human element in the design process. Obviously computers do not possess real imagination to the depth of humans, which does limit the creativity aspect severely. 
 </br>
 </br>
