@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/post-school.astro"
 title: "Why the War on Game Tools is a Misfire"
-description: "Lorem ipsum dolor sit amet, lorem ipsum dolor sit"
+description: "A look into why AI content tools are great for the game industry, and why common fears may be misguided."
 shortdesc: "Lorem ipsum dolor sit amet"
 pubDate: "Oct 22 2022"
 heroImage: "../../assets/blogs/post_1/AIProgrammer.png"

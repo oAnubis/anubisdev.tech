@@ -52,7 +52,6 @@ const postThree = posts[2];
 				width: 100%;
 				height: auto;
 			}
-
 			.gradient,
 			.gradient2 {
 				background-image: url('/assets/mesh-gradient.png');
@@ -112,6 +111,8 @@ const postThree = posts[2];
 					gap: 1em;
 					justify-content: center;
 				}
+			
+			
 
 			.sectionTitle {
 				color: var(--c-titletext);
@@ -200,7 +201,6 @@ const postThree = posts[2];
 				font-weight: 700;
 				font-size: var(--f-u4);
 			}
-
 			.buttonContainer {
 				text-align: center;
 				margin-top: 2em;
@@ -277,6 +277,10 @@ const postThree = posts[2];
 				#post3{
 					display: inline-block;
 				}
+
+				.blog-section{
+					max-width: 33%;
+				}
 				
 				.title {
 					font-size: var(--f-u12);
@@ -286,6 +290,12 @@ const postThree = posts[2];
 					height: 45vw;
 				}
 
+			}
+
+			@media (max-width: 1023px){
+				.blog-section{
+					max-width: 50%;
+				}
 			}
 
 			@media (min-width: 768px) and (max-width: 1199px){
@@ -309,11 +319,6 @@ const postThree = posts[2];
 				.flexbox {
 					justify-content:left;
 				}
-
-				.section {
-					
-				}
-
 				#blogtitle {
 					margin-top: 0rem;
 					margin-bottom: 1em;
@@ -394,23 +399,14 @@ const postThree = posts[2];
 			<div class="grid">
 				<h3 class="sectionTitle" id="blogtitle">Recent Blogs</h3>
 				<div class="flexbox">
-					<div class="section">
+					<div class="blog-section" id="blog">
 						<BlogPreview post={postOne}/>
-						<div class="buttonContainer">
-							<a href="/blogs/" class="button">View All</a>
-						</div>
 					</div>
-					<div class="section">
+					<div class="blog-section" id="blog">
 						<BlogPreview post={postTwo}/>
-						<div class="buttonContainer">
-							<a href="/blogs/" class="button">View All</a>
-						</div>
 					</div>
-					<div class="section" id="post3">
+					<div class="blog-section" id="post3">
 						<BlogPreview post={postThree}/>
-						<div class="buttonContainer">
-							<a href="/blogs/" class="button">View All</a>
-						</div>
 					</div>
 				</div>
 				<h3 class="sectionTitle">Selected Work</h3>

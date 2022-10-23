@@ -39,6 +39,10 @@ const blogposts = (await Astro.glob('./blog/**/*.md')).sort(
 			margin-bottom: 3rem;
            }
 
+           .grid{
+            gap: 2em;
+           }
+
            @media (min-width: 1200px) {
 				.blog-list {
 					grid-template-columns: 2fr em;

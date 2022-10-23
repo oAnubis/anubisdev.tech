@@ -3,11 +3,12 @@
 const { frontmatter, url } = Astro.props.post;
 ---
 
-<div class="card">
+<div class="card" id="bcard">
 	<div class="titleCard" style={`background-image:url(${frontmatter.heroImage})`}>
-		<h1 class="title">{frontmatter.title}</h1>
+		
 	</div>
 	<div class="descCard">
+		<p class= "blogtitle">{frontmatter.title}</p>
 		<p class="sdesc">{frontmatter.shortdesc}</p>
 		<p class="desc">{frontmatter.description}</p>
 		<p class="date">{frontmatter.pubDate}</p>
@@ -24,6 +25,15 @@ const { frontmatter, url } = Astro.props.post;
 		background: var(--t-fg);
 		border: 1px solid #f0f0f0;
 		margin-bottom: 2rem;
+		min-height: 100%;
+	}
+
+	
+
+	.blogtitle{
+		font-size:larger;
+		font-weight: bold;
+		color: aqua;
 	}
 
 	.title {
