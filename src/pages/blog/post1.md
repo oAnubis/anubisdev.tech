@@ -2,14 +2,13 @@
 layout: "../../layouts/post-school.astro"
 title: "Why the War on Game Tools is a Misfire"
 description: "A look into why AI content tools are great for the game industry, and why common fears may be misguided."
-shortdesc: "Lorem ipsum dolor sit amet"
+shortdesc: "Why AI tools are great"
 pubDate: "Oct 22 2022"
 heroImage: "../../assets/blogs/post_1/AIProgrammer.png"
 tags:
     Brandon Coburn --
     English Composition --
     Show What You Know
-author1: Francis,B.
 ---
 <style>
 
