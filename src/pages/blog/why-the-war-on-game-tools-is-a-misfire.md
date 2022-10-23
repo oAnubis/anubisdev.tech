@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/post-school.astro"
-title: "Why the War on Game Tools is a Misfire"
+title: "Why the War on AI Game Tools is a Misfire"
 description: "A look into why AI content tools are great for the game industry, and why common fears may be misguided."
 shortdesc: "Why AI tools are great"
 pubDate: "Oct 22 2022"
