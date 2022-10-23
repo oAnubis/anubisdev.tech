@@ -17,6 +17,7 @@ const posts = await Astro.glob('./blog/**/*.md');
 const postOne = posts[0];
 const postTwo = posts[1];
 const postThree = posts[2];
+const postOneUrl = posts[0].url;
 
 
 
@@ -399,9 +400,11 @@ const postThree = posts[2];
 			<div class="grid">
 				<h3 class="sectionTitle" id="blogtitle">Recent Blogs</h3>
 				<div class="flexbox">
-					<div class="blog-section" id="blog">
-						<BlogPreview post={postOne}/>
-					</div>
+					<a class="blogLink" href={postOneUrl}>
+						<div class="blog-section" id="blog">
+							<BlogPreview post={postOne}/>
+						</div>
+					</a>
 					<div class="blog-section" id="blog">
 						<BlogPreview post={postTwo}/>
 					</div>
