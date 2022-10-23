@@ -7,7 +7,56 @@ pubDate: "Jul 08 2022"
 heroImage: "/placeholder-hero.jpg"
 tags: ["post-type", "subject"]
 ---
+<style>
+     main{
+        display: flex;
+        justify-content: center;
+    }
 
+    .hero-container{
+        padding-top: 2rem;
+        display:flex;
+        justify-content: center;
+    }
+
+    .hero-image{
+        width:auto;
+        height:auto;
+    }
+
+    .article{
+        display: grid;
+        width: 90%;
+    }
+
+    .image {
+        max-width: 100%;
+    }
+
+    .images {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .section-title{
+        font-size: 20px;
+        font-weight: bold;
+        color: #3582a6;
+    }
+
+    .references{
+				margin-top: 2em;
+				border-top: 1px solid #DDD;
+			}
+</style>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
 
 Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.

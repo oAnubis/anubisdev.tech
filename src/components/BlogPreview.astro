@@ -1,5 +1,5 @@
 ---
-
+const { minutesRead} = Astro.props;
 const { frontmatter, url } = Astro.props.post;
 ---
 
@@ -12,6 +12,7 @@ const { frontmatter, url } = Astro.props.post;
 		<p class="sdesc">{frontmatter.shortdesc}</p>
 		<p class="desc">{frontmatter.description}</p>
 		<p class="date">{frontmatter.pubDate}</p>
+		<p class="time">{frontmatter.minutesRead}</p>
 		<a class="link" href={url}>
 			<!-- <span class="linkInner">View</span> -->
 		</a>
@@ -26,6 +27,18 @@ const { frontmatter, url } = Astro.props.post;
 		border: 1px solid #f0f0f0;
 		margin-bottom: 2rem;
 		min-height: 100%;
+	}
+
+	.date{
+		color: white;
+	}
+	.time{
+		position: absolute;
+		bottom:0;
+		right:0;
+		padding-right: 1em;
+		padding-bottom: .3em;
+		color: aqua;
 	}
 
 	
@@ -64,6 +77,7 @@ const { frontmatter, url } = Astro.props.post;
 
 	.descCard {
 		padding: 1.5em;
+		border-top: 2px solid aqua;
 	}
 
 	.desc {
